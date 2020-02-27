@@ -1,0 +1,107 @@
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int a[5]={85, 90, 75, 100, 95};
+	int result1=0;
+	int result2=0;
+
+	for(int i=0; i<5; i++)
+	{
+		if(a[i]%2==0)
+		{
+			result1+=a[i];
+		}
+		else
+		{
+			result2+=a[i];
+		}
+	}
+
+	cout << "짝수 합 : " << result1 <<"\n";
+	cout << "홀수 합 : " << result2 <<"\n";
+}
+-----
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int arr[5];
+	int max;
+	int i;
+
+	cout << "정수형 데이터를 5개 입력 \n";
+	
+	for(i=0; i<5; i++)
+	{
+		do
+		{
+			cin >> arr[i];
+		}while(arr[i]>=50 && i<=2);
+	}
+
+	max = arr[0];
+
+	for(i=1; i<5; i++)
+	{
+		if(arr[i] > max)
+			max = arr[i];
+	}
+
+	cout << "최대값 => " << max << "\n";
+}
+------
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	int a[5] = {10, 20, 30, 40, 50};
+	int i;
+a
+	cout << "원소의 값을 출력 \n";
+
+	for(i=0; i<5; i++)
+		cout << a[i] << "\n";
+	cout << "\n";
+
+	cout << "원소의 주소 값을 출력 \n";
+
+	for(i=0; i<5; i++)
+	{
+		cout << &a[i] <<"\n"; //int형 주소 
+	}
+	cout << "\n";
+}
+------
+#include <iostream>
+using namespace std;
+
+void init_arr (int *pa, int size)
+{
+	cout << "5개의 정수를 입력하세요 : ";
+
+	for(int i=0; i<size; i++)
+	{		
+		cin>>pa[i];
+	}
+}
+
+void prn_arr (int *pa, int size)
+{
+	for(int i=0; i<size; i++)
+	{
+		cout << pa[i] <<"\n";
+	}
+}
+
+void main()
+{
+	int a[5];
+
+	init_arr(a, 5);
+	prn_arr(a, 5);
+}
