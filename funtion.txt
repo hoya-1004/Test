@@ -1,8 +1,0 @@
-funtion sayHello(name, age){
-	console.log('Hello ${name} you are ${age} years old');
-}
-
-const greetHo = sayHello("Ho", 26)
-
-console.log(greetHo)
-
